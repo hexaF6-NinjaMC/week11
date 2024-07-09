@@ -1,0 +1,22 @@
+{
+  "name": "auth-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "prettify": "prettier --write ../../",
+    "start": "json-server -s ./static --watch ./database.json --port 4000",
+    "start-auth": "node ./server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.17.4",
+    "jsonwebtoken": "^9.0.2",
+    "sanitize-html": "^2.13.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5",
+    "prettier": "^3.3.2"
+  }
+}

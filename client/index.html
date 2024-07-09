@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Auth Example | WDD-330</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./week11.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>This is a test application.</h1>
+      <p>
+        This is a simple application that demonstrates user authentication using
+        JSON Web Tokens (JWT). Users can log in with a sample username/email and
+        password, and upon successful login, they will receive a JWT. To test
+        this application, you can use the following sample credentials:
+      </p>
+      <ul>
+        <li>Username: niklauswirth89</li>
+        OR
+        <li>Email: nw89@pascal.cre</li>
+        AND
+        <li>Password: thePascalP10n33r>2024-01-01</li>
+      </ul>
+      <p>
+        These credentials are an homage to Niklaus Wirth, who passed away
+        January 1, 2024, at the ripe age of 89 years. You can find his history
+        on
+        <a href="https://en.wikipedia.org/wiki/Niklaus_Wirth" target="_blank"
+          >this Wikipedia article</a
+        >.
+      </p>
+      <p>
+        Upon successful login, you should see the login form replaced with a
+        "Create new post" from. It is pretty bare-bones, so don't expect too
+        much out of it!
+      </p>
+    </header>
+
+    <main>
+      <!-- <a href="../../">&Lt; Go Back to Portal</a> -->
+      <div id="errors" class="errors hidden"></div>
+      <div id="login">
+        <form name="login" autocomplete="on">
+          <fieldset>
+            <legend>Login:</legend>
+            <label for="username">Username/Email:</label>
+            <input
+              type="text"
+              id="username"
+              required
+              placeholder="Enter your username or email address here"
+              autofocus
+              autocomplete="username email"
+            /><br />
+            <label for="password">Password:</label>
+            <input
+              type="password"
+              id="password"
+              required
+              placeholder="Password"
+              autocomplete="current-password"
+            /><br />
+            <input type="submit" value="Login" id="submitBtn" />
+          </fieldset>
+        </form>
+      </div>
+      <div id="content" class="hidden">
+        <form name="postForm">
+          <fieldset>
+            <legend>Create new post:</legend>
+            <div>
+              <label for="title">Title:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="title"
+                name="title"
+                placeholder="title"
+                required
+              />
+            </div>
+            <div>
+              <label for="postContent">Content:</label>
+              <textarea
+                type="text"
+                class="form-control"
+                id="postContent"
+                name="content"
+                placeholder="content"
+                required
+              ></textarea>
+            </div>
+            <div id="postError"></div>
+            <input type="button" id="createSubmit" value="Create Submission" />
+          </fieldset>
+        </form>
+        <ul id="list"></ul>
+      </div>
+    </main>
+
+    <footer>
+      <h3>
+        This is the footer.
+      </h3>
+    </footer>
+    <script src="./week11.js" type="module"></script>
+  </body>
+</html>
