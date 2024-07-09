@@ -26,7 +26,7 @@ export class Errors {
 }
 
 // Server Address
-const baseURL = "";
+const baseURL = "/";
 
 // helper function to make an http request with fetch.
 // returns a json object

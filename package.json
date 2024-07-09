@@ -4,14 +4,14 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "prettify": "prettier --write ../../",
-    "start": "json-server -s ./static --watch ./database.json --port 4000",
+    "prettify": "prettier --write .",
+    "start": "json-server --watch ./auth/json-server/database.json --port 4000",
     "start-auth": "node ./server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "json-server": "^0.17.4",
+    "json-server": "~0.17.4",
     "jsonwebtoken": "^9.0.2",
     "sanitize-html": "^2.13.0"
   },

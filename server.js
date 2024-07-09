@@ -2,11 +2,13 @@ const jwt = require("jsonwebtoken");
 const bodyParser = require("body-parser");
 const jsonServer = require("json-server");
 const server = jsonServer.create();
-const router = jsonServer.router("./database.json");
+const router = jsonServer.router("./auth/json-server/database.json");
 
 server.use(bodyParser.urlencoded({ extended: true }));
 server.use(bodyParser.json());
-server.use(jsonServer.defaults({ static: "../../client" }));
+server.use(jsonServer.defaults({ static: "./client" }));
+
+console.log(jsonServer.defaults({ static: "./client" }));
 
 const SECRET_KEY = "123456789";
 
@@ -90,7 +92,7 @@ server.use(/^(?!\/auth).*$/, (req, res, next) => {
   }
 });
 
-server.use(router);
+server.use('/', router);
 
 server.listen(4000, () => {
   console.log("Run Auth API Server");
